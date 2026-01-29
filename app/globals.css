@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-white: 255 255 255;
+  --color-hero-bg: 246 241 237;
+  --color-hero-heading: 123 90 78;
+  --color-hero-body: 139 111 98;
+  --color-cta: 47 50 70;
+  --color-cta-hover: 59 63 89;
+  --color-hero-shadow: 90 63 52;
 }
 
 @theme inline {
