@@ -16,7 +16,7 @@ export default function Home() {
             <h1 className="text-5xl max-w-120 font-normal leading-tight text-[var(--color-hero-heading)]">Recuperação Confortável e Segura: Alugue Poltronas Elétricas para Pós-Operatório.</h1>
 
             <p className="mt-5 leading-relaxed text-[var(--color-hero-body)] max-w-96 text-[17px] font-extralight">Tenha uma recuperação tranquila, com conforto e autonomia garantidos.</p>
-            <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[var(--color-cta)]/[0.3] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">
+            <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-[17px] font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[var(--color-cta)]/[0.3] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">
               Conhecer
               <BsArrowDownRight size={18} />
             </button>
