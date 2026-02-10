@@ -3,13 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-white: 255 255 255;
-  --color-hero-bg: 246 241 237;
-  --color-hero-heading: 123 90 78;
-  --color-hero-body: 139 111 98;
-  --color-cta: 47 50 70;
-  --color-cta-hover: 59 63 89;
-  --color-hero-shadow: 90 63 52;
+  --color-white: #ffffff;
+  --color-hero-bg: #f6f1ed;
+  --color-hero-heading: #7b5a4e;
+  --color-hero-body: #8b7f62;
+  --color-cta: #2f3246;
+  --color-cta-hover: #3b3f59;
+  --color-hero-shadow: #5a3f34;
 }
 
 @theme inline {
