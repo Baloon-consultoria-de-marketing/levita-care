@@ -30,6 +30,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .info-section-bg-info {
@@ -50,6 +55,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   border-radius: 0 0 100px 100px;
+}
+
+.how-works-bg {
+  background-color: #2f3246;
+  background-image: url("/fundoAnimado.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 80px 0;
 }
 
 .info-section-pin {

@@ -4,6 +4,7 @@ import { AboutSection } from "./components/AboutSection";
 import InfoSection from "./components/InfoSection";
 import HealthSection from "./components/HealthSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import HowWorks from "./components/HowWorks";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <InfoSection />
       <HealthSection />
       <TestimonialsSection />
+      <HowWorks />
     </main>
   );
 }

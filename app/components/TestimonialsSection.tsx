@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { BsArrowLeft, BsArrowRight, BsStarFill } from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight, BsArrowUpRight, BsStarFill } from "react-icons/bs";
 import { SectionWrapper } from "./SectionWrapper";
 
 type Testimonial = {
@@ -104,7 +104,7 @@ const TestimonialsSection = () => {
         <div className="flex justify-center">
           <button className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-8 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">
             Alugar minha poltrona agora
-            <span className="text-base">→</span>
+            <BsArrowUpRight size={16} />
           </button>
         </div>
       </SectionWrapper>
