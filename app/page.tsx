@@ -3,6 +3,7 @@ import { BsArrowDownRight } from "react-icons/bs";
 import { AboutSection } from "./components/AboutSection";
 import InfoSection from "./components/InfoSection";
 import HealthSection from "./components/HealthSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -30,9 +31,7 @@ export default function Home() {
       <AboutSection />
       <InfoSection />
       <HealthSection />
-      <div>
-        <p className="text-6xl text-black">teste</p>
-      </div>
+      <TestimonialsSection />
     </main>
   );
 }

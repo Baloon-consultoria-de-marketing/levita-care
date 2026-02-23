@@ -24,7 +24,7 @@ const features = [
 
 const InfoSection = () => {
   return (
-    <section className="relative info-section-bg">
+    <section className="relative info-section-bg-info">
       <SectionWrapper className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16">
         <div className="relative">
           <div className="overflow-hidden rounded-[32px] border-2 border-[var(--color-hero-shadow)] shadow-[0_30px_60px_rgba(20,20,35,0.35)]">
