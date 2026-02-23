@@ -31,3 +31,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.info-section-bg {
+  background-color: #2f3246;
+  background-image: radial-gradient(circle at 12px 12px, rgba(255, 255, 255, 0.08) 1.2px, transparent 1.3px);
+  background-size: 44px 44px;
+}

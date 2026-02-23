@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { BsArrowDownRight } from "react-icons/bs";
 import { AboutSection } from "./components/AboutSection";
+import InfoSection from "./components/InfoSection";
+import HealthSection from "./components/HealthSection";
 
 export default function Home() {
   return (
@@ -26,6 +28,11 @@ export default function Home() {
 
       {/* About Section */}
       <AboutSection />
+      <InfoSection />
+      <HealthSection />
+      <div>
+        <p className="text-6xl text-black">teste</p>
+      </div>
     </main>
   );
 }
