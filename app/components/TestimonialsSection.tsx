@@ -74,16 +74,16 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        <div className="testimonial-carousel">
-          <button className="testimonial-nav left" onClick={() => handleScroll("left")} aria-label="Anterior">
+        <div className="testimonial-carousel -mx-6 sm:mx-0 px-6 sm:px-12">
+          <button className="hidden sm:inline-flex testimonial-nav left" onClick={() => handleScroll("left")} aria-label="Anterior">
             <BsArrowLeft size={18} />
           </button>
-          <button className="testimonial-nav right" onClick={() => handleScroll("right")} aria-label="Proximo">
+          <button className="hidden sm:inline-flex testimonial-nav right" onClick={() => handleScroll("right")} aria-label="Proximo">
             <BsArrowRight size={18} />
           </button>
           <div ref={trackRef} className="testimonial-track" aria-live="polite">
             {testimonials.map((item, index) => (
-              <article key={`${item.name}-${index}`} className="testimonial-card">
+              <article key={`${item.name}-${index}`} className="testimonial-card shrink-0 w-[280px] sm:w-[300px]">
                 <div className="testimonial-avatar" style={{ backgroundColor: item.color }}>
                   <span>{item.initials}</span>
                 </div>

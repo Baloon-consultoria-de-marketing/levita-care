@@ -119,11 +119,17 @@ html {
 
 .testimonial-card {
   position: relative;
-  flex: 0 0 300px;
+  flex: 0 0 280px;
   padding: 40px 26px 28px;
   border-radius: 24px;
   background: var(--color-hero-bg);
   box-shadow: 0 18px 40px rgba(20, 20, 35, 0.12);
+}
+
+@media (min-width: 640px) {
+  .testimonial-card {
+    flex: 0 0 300px;
+  }
 }
 
 .testimonial-avatar {

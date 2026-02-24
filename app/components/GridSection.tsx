@@ -11,9 +11,9 @@ export function GridSection({ left, right, leftFirst = true, className = "" }: G
   const order = leftFirst ? "lg:order-first" : "lg:order-last";
 
   return (
-    <section className={`grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center ${className}`}>
-      <div className={order}>{left}</div>
-      <div>{right}</div>
+    <section className={`grid grid-cols-1 gap-8 sm:gap-12 lg:grid-cols-2 lg:gap-16 items-center ${className}`}>
+      <div className={`${order} w-full`}>{left}</div>
+      <div className="w-full">{right}</div>
     </section>
   );
 }

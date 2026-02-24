@@ -57,11 +57,11 @@ export function AboutSection() {
           </>
         }
         right={
-          <div className="relative w-full h-96 lg:h-full">
+          <div className="relative w-full h-[300px] sm:h-[400px] lg:h-full lg:min-h-[500px]">
             <Image
               src="/mulher-sentada-poltrona.png"
               alt="Mulher relaxando em poltrona elétrica"
-              className="border-2 border-[var(--color-hero-shadow)] rounded-3xl object-cover"
+              className="border-2 border-[var(--color-hero-shadow)] rounded-3xl object-cover h-full w-full"
               width={1920}
               height={1080}
             />
