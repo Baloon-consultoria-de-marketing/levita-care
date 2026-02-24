@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { BsArrowDownRight } from "react-icons/bs";
+
+import Faq from "./components/Faq";
 import { AboutSection } from "./components/AboutSection";
 import InfoSection from "./components/InfoSection";
 import HealthSection from "./components/HealthSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import HowWorks from "./components/HowWorks";
 import Link from "next/link";
-import Faq from "./components/Faq";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -52,6 +54,7 @@ export default function Home() {
       <TestimonialsSection />
       <HowWorks />
       <Faq />
+      <Footer />
     </main>
   );
 }

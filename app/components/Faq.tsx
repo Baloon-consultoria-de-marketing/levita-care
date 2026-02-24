@@ -14,7 +14,7 @@ const FaqItem = ({ question, answer, isOpen, toggleOpen }: { question: string; a
       <button
         onClick={toggleOpen}
         className={`group flex w-full items-center gap-4 px-6 py-4 text-left transition-colors duration-300 cursor-pointer ${
-          isOpen ? "bg-[#3D3F5B] text-white" : "bg-white text-gray-400 hover:bg-[#3D3F5B] hover:text-white"
+          isOpen ? "bg-[#698b8c] text-white" : "bg-white text-gray-400 hover:bg-[#698b8c] hover:text-white"
         }`}
       >
         <span className="flex h-5 w-5 shrink-0 items-center justify-center text-2xl font-bold leading-none">{isOpen ? "−" : "+"}</span>
