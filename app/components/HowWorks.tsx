@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "./SectionWrapper";
-import { useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 
@@ -112,15 +112,25 @@ const HowWorks = () => {
         </div>
 
         <div className="relative space-y-8 max-w-2xl mx-auto pt-8">
-          <div className="absolute left-[30px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[rgba(255,255,255,0.3)] to-transparent"></div>
+          <div className="absolute left-[44px] top-12 bottom-0 w-[2px] bg-gradient-to-b from-[rgba(255,255,255,0.3)] to-transparent"></div>
 
           {steps.map((step) => (
             <div key={step.number} className="relative pl-24">
-              <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center rounded-full bg-[#b8a486] text-[#2f3246] font-bold text-xl shadow-lg">{step.number}</div>
-              <div className="rounded-2xl border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] p-6 backdrop-blur-sm">
+              <div className="absolute left-5 top-2 w-12 h-12 flex items-center justify-center rounded-full bg-[#b8a486] text-[#2f3246] font-normal text-3xl shadow-lg z-10">{step.number}</div>
+
+              <motion.div
+                initial={{ y: 0, boxShadow: "none" }}
+                whileInView={{
+                  y: -8,
+                  boxShadow: "0px 0px 43px 0px rgba(255,255,255,0.75)",
+                }}
+                viewport={{ once: false, amount: 0.5, margin: "0px 0px -100px 0px" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="rounded-2xl border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] p-6 backdrop-blur-sm"
+              >
                 <h3 className="text-xl font-semibold text-[var(--color-white)]">{step.title}</h3>
                 <p className="mt-3 text-base leading-relaxed text-[rgba(255,255,255,0.75)]">{step.description}</p>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>

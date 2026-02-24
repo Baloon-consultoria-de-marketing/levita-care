@@ -38,7 +38,7 @@ const InfoSection = () => {
             return (
               <article
                 key={feature.title}
-                className="rounded-3xl border border-[rgba(255,255,255,0.6)] bg-[rgba(236,225,214,0.9)] p-6 max-w-[370px] text-[var(--color-cta)] shadow-[0_18px_45px_rgba(12,12,24,0.25)]"
+                className="rounded-3xl border border-[rgba(255,255,255,0.6)] bg-[var(--color-hero-bg)]/90 p-6 max-w-[370px] text-[var(--color-cta)] shadow-[0_18px_45px_rgba(12,12,24,0.25)]"
               >
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-cta)] text-[var(--color-white)]">
                   <Icon size={20} />
