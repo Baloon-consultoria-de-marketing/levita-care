@@ -26,7 +26,7 @@ const HealthSection = () => {
   return (
     <section className="relative info-section-bg-health info-section-pin">
       <div className="info-section-sticky">
-        <SectionWrapper className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-stretch lg:gap-16">
+        <SectionWrapper className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-stretch lg:gap-10">
           <div className="space-y-6 lg:order-first">
             {features.map((feature) => {
               const Icon = feature.icon;
