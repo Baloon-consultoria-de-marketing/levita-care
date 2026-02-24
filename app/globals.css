@@ -44,7 +44,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border-radius: 100px 100px 0 0;
+  border-radius: 80px 80px 0 0;
 }
 
 .info-section-bg-health {
@@ -54,7 +54,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border-radius: 0 0 100px 100px;
+  border-radius: 0 0 80px 80px;
 }
 
 .how-works-bg {
@@ -65,6 +65,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 80px 0;
+  border-radius: 800px 800px 0 0;
 }
 
 .info-section-pin {

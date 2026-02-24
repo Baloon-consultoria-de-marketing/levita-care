@@ -47,8 +47,9 @@ type CarouselRowProps = {
   duration?: number;
 };
 
-const CarouselRow = ({ items, direction = "left", duration = 20 }: CarouselRowProps) => {
-  const duplicatedItems = [...items, ...items];
+const CarouselRow = ({ items, direction = "left", duration = 65 }: CarouselRowProps) => {
+  // Duplicate items more times to ensure seamless looping on large screens
+  const duplicatedItems = [...items, ...items, ...items, ...items, ...items, ...items];
   const directionClass = direction === "left" ? "carousel-track-left" : "carousel-track-right";
 
   return (
@@ -122,9 +123,9 @@ const HowWorks = () => {
           ))}
         </div>
         <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 pt-16">
-          <div className="space-y-6 px-4 sm:px-6 lg:px-8">
-            <CarouselRow items={carouselItems} direction="left" duration={20} />
-            <CarouselRow items={carouselItems} direction="right" duration={20} />
+          <div className="space-y-6">
+            <CarouselRow items={carouselItems} direction="left" duration={45} />
+            <CarouselRow items={carouselItems} direction="right" duration={45} />
           </div>
         </div>
       </SectionWrapper>
