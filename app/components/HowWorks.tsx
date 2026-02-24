@@ -116,7 +116,9 @@ const HowWorks = () => {
 
           {steps.map((step) => (
             <div key={step.number} className="relative pl-24">
-              <div className="absolute left-5 top-2 w-12 h-12 flex items-center justify-center rounded-full bg-[#b8a486] text-[#2f3246] font-normal text-3xl shadow-lg z-10">{step.number}</div>
+              <div className="absolute left-5 top-2 w-12 h-12 flex items-center justify-center rounded-full bg-[var(--color-hero-bg)]/90 text-[#2f3246] font-normal text-3xl shadow-lg z-10">
+                {step.number}
+              </div>
 
               <motion.div
                 initial={{ y: 0, boxShadow: "none" }}
