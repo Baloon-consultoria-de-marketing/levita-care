@@ -44,8 +44,7 @@ html {
 }
 
 .info-section-bg-info {
-  background-color: #2f3246;
-  background-image: url("../public/fundoAnimado.png");
+  background-color: var(--color-levita-teal);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,9 +53,7 @@ html {
 }
 
 .info-section-bg-health {
-  background-color: #2f3246;
-  background-image: url("../public/fundoAnimado.png");
-  background-size: cover;
+  background-color: var(--color-levita-teal);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -64,9 +61,7 @@ html {
 }
 
 .how-works-bg {
-  background-color: #2f3246;
-  background-image: url("/fundoAnimado.png");
-  background-size: cover;
+  background-color: var(--color-levita-teal);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
