@@ -6,6 +6,7 @@ import HealthSection from "./components/HealthSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import HowWorks from "./components/HowWorks";
 import Link from "next/link";
+import Faq from "./components/Faq";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       <HealthSection />
       <TestimonialsSection />
       <HowWorks />
+      <Faq />
     </main>
   );
 }

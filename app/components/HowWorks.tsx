@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { BsArrowUpRight } from "react-icons/bs";
 
 const steps = [
   {
@@ -126,6 +128,22 @@ const HowWorks = () => {
           <div className="space-y-6">
             <CarouselRow items={carouselItems} direction="left" duration={45} />
             <CarouselRow items={carouselItems} direction="right" duration={45} />
+          </div>
+        </div>
+        <div className=" flex flex-col text-center gap-10 mt-96">
+          <p className="text-center text-[var(--color-white)] text-8xl">Recuperação sem complicação !</p>
+          <p className="text-center text-[var(--color-white)] text-xl ">
+            Investir no seu conforto durante a recuperação é essencial para garantir que seu corpo se recupere de forma mais eficiente. Com as poltronas elétricas da Poltroleve, você vai poder
+            descansar e se recuperar da melhor forma possível
+          </p>
+          <p className="text-center text-[var(--color-white)] text-xl w-full">Entre em contato conosco hoje mesmo e alugue a sua poltrona!</p>
+          <div className="flex justify-center">
+            <button className="mb-10 inline-flex items-center gap-2 rounded-full bg-[#ddd0c6] px-6 py-3 text-lg font-medium text-black cursor-pointer transition hover:-translate-y-2 ease-in-out duration-500 hover:shadow-[0px_0px_43px_0px_rgba(255,255,255,0.75)]">
+              <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas">
+                Alugar minha poltrona agora
+              </Link>
+              <BsArrowUpRight size={18} color="#000" />
+            </button>
           </div>
         </div>
       </SectionWrapper>
