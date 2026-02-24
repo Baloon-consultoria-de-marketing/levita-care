@@ -8,13 +8,11 @@ import { Questions } from "./Questions";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const FaqItem = ({ question, answer, isOpen, toggleOpen }: { question: string; answer: string; isOpen: boolean; toggleOpen: () => void }) => {
   return (
     <div className={`overflow-hidden rounded-md border transition-all duration-300 ${isOpen ? "border-transparent shadow-lg" : "border-gray-200 bg-white"}`}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleOpen}
         className={`group flex w-full items-center gap-4 px-6 py-4 text-left transition-colors duration-300 cursor-pointer ${
           isOpen ? "bg-[#3D3F5B] text-white" : "bg-white text-gray-400 hover:bg-[#3D3F5B] hover:text-white"
         }`}
@@ -35,6 +33,8 @@ const FaqItem = ({ question, answer }: { question: string; answer: string }) => 
 };
 
 const Faq = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <div className="w-full max-w-7xl mx-auto py-16 px-6">
       <h2 className="text-4xl font-normal text-black sm:text-5xl text-center mb-12">Perguntas Frequentes</h2>
@@ -43,7 +43,7 @@ const Faq = () => {
         {/* Coluna da Esquerda: Perguntas */}
         <div className="space-y-4">
           {Questions.map((faq, index) => (
-            <FaqItem key={index} question={faq.question} answer={faq.answer} />
+            <FaqItem key={index} question={faq.question} answer={faq.answer} isOpen={openIndex === index} toggleOpen={() => setOpenIndex(openIndex === index ? null : index)} />
           ))}
         </div>
 
