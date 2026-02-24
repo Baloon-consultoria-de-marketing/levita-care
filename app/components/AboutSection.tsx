@@ -2,6 +2,7 @@ import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
 import { SectionWrapper } from "./SectionWrapper";
 import { GridSection } from "./GridSection";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
@@ -28,7 +29,9 @@ export function AboutSection() {
               </p>
 
               <button className="mb-10 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">
-                Alugar minha poltrona agora
+                <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas">
+                  Alugar minha poltrona agora
+                </Link>
                 <BsArrowUpRight size={18} />
               </button>
 

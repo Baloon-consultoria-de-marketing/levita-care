@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "./SectionWrapper";
+import { useScroll, useTransform } from "framer-motion";
 
 const steps = [
   {
@@ -32,9 +34,50 @@ const steps = [
   },
 ];
 
+const carouselItems = [
+  { icon: "/icons/truck.svg", text: "Entregamos e buscamos na sua casa" },
+  { icon: "/icons/cursor.svg", text: "Alugue num processo totalmente online" },
+  { icon: "/icons/pin.svg", text: "Entrega para São Paulo e Região" },
+  { icon: "/icons/heart.svg", text: "Produtos novos e bem cuidados" },
+];
+
+type CarouselRowProps = {
+  items: { icon: string; text: string }[];
+  direction?: "left" | "right";
+  duration?: number;
+};
+
+const CarouselRow = ({ items, direction = "left", duration = 20 }: CarouselRowProps) => {
+  const duplicatedItems = [...items, ...items];
+  const directionClass = direction === "left" ? "carousel-track-left" : "carousel-track-right";
+
+  return (
+    <div className="overflow-hidden w-full">
+      <div className={`carousel-track ${directionClass}`} style={{ animationDuration: `${duration}s` }}>
+        {duplicatedItems.map((item, index) => (
+          <div
+            key={`${item.text}-${index}`}
+            className="shrink-0 flex items-center justify-center rounded-md border border-[rgba(255,255,255,0.25)] bg-[#ddd0c6] px-5 py-3 text-black cursor-pointer transition-all hover:scale-[103%] duration-300 ease-in-out"
+          >
+            <Image src={item.icon} alt={item.text} width={20} height={20} className="mr-3 text-black" style={{ width: "20px", height: "auto" }} />
+            <span className="font-medium text-sm">{item.text}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const HowWorks = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const [blurAmount, setBlurAmount] = useState(0);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [50, -100]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,16 +88,14 @@ const HowWorks = () => {
       const windowHeight = window.innerHeight;
       const sectionTop = rect.top;
 
-      // Calcula quanto da seção está visível (0 a 1)
       const visibleAmount = Math.max(0, Math.min(1, (windowHeight - sectionTop) / (windowHeight + rect.height)));
 
-      // Blur cresce de 0 a 10px conforme o scroll
       const blur = visibleAmount * 10;
       setBlurAmount(blur);
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Chama uma vez no mount
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -73,13 +114,18 @@ const HowWorks = () => {
           {steps.map((step) => (
             <div key={step.number} className="relative pl-24">
               <div className="absolute left-0 top-2 w-16 h-16 flex items-center justify-center rounded-full bg-[#b8a486] text-[#2f3246] font-bold text-xl shadow-lg">{step.number}</div>
-
               <div className="rounded-2xl border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] p-6 backdrop-blur-sm">
                 <h3 className="text-xl font-semibold text-[var(--color-white)]">{step.title}</h3>
                 <p className="mt-3 text-base leading-relaxed text-[rgba(255,255,255,0.75)]">{step.description}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 pt-16">
+          <div className="space-y-6 px-4 sm:px-6 lg:px-8">
+            <CarouselRow items={carouselItems} direction="left" duration={20} />
+            <CarouselRow items={carouselItems} direction="right" duration={20} />
+          </div>
         </div>
       </SectionWrapper>
     </section>
