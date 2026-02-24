@@ -17,9 +17,13 @@ export default function Home() {
           <Image src="/hero.jpg" alt="Mulher relaxando em poltrona elétrica" className="h-full w-full object-cover" width={1920} height={1080} />
         </div>
 
-        {/* MODIFIQUEI AQUI: Adicionei 'pointer-events-none' para garantir que ela não bloqueie cliques se ficar em cima de algo, e mudei os valores para testar */}
-        <div className="absolute z-50 top-28 left-32 md:top-14 md:left-14 lg:top-32 pointer-events-none">
-          <Image src="/logo_levitacare_transparente.png" alt="LevitaCare Logo" width={180} height={60} className="w-32 sm:w-44" />
+        {/* LOGO: Centralizada e Grande no Mobile -> Canto Superior no Desktop */}
+        <div
+          className="absolute z-50 pointer-events-none 
+          top-16 left-1/2 -translate-x-1/2 w-48 
+          md:top-36 md:left-14 md:translate-x-0 md:w-auto"
+        >
+          <Image src="/logo_levitacare_transparente.png" alt="LevitaCare Logo" width={180} height={60} className="w-full sm:w-44" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl items-center px-4 py-12 sm:px-6 sm:py-16">
