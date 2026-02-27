@@ -47,7 +47,7 @@ const HealthSection = () => {
 
           <div className="relative lg:order-last lg:h-full">
             <div className="relative h-full min-h-[360px] overflow-hidden rounded-[32px] border-2 border-[var(--color-hero-shadow)] shadow-[0_30px_60px_rgba(20,20,35,0.35)]">
-              <Image src="/mulher-sentada-poltrona.png" alt="Mulher relaxando em poltrona eletrica" className="h-full w-full object-cover" fill sizes="(min-width: 1024px) 55vw, 100vw" />
+              <Image src="/sentada-mulher.png" alt="Mulher relaxando em poltrona eletrica" className="h-full w-full object-cover" fill sizes="(min-width: 1024px) 55vw, 100vw" />
             </div>
           </div>
         </SectionWrapper>

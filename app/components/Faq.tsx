@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import FinalImage from "../../public/final-image.jpg";
+import FinalImage from "../../public/footer-image.png";
 import Link from "next/link";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Questions } from "./Questions";

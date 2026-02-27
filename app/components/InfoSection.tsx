@@ -27,8 +27,8 @@ const InfoSection = () => {
     <section className="relative info-section-bg-info">
       <SectionWrapper className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-10">
         <div className="relative w-full h-[300px] sm:h-[400px] lg:h-auto">
-          <div className="h-full w-full overflow-hidden rounded-[32px] border-2 border-[var(--color-hero-shadow)] shadow-[0_30px_60px_rgba(20,20,35,0.35)]">
-            <Image src="/mulher-sentada-poltrona.png" alt="Mulher relaxando em poltrona eletrica" className="h-full w-full object-cover" width={1920} height={1080} priority />
+          <div className="h-full w-full overflow-hidden rounded-[32px] lg:max-h-[800px] border-2 border-[var(--color-hero-shadow)] shadow-[0_30px_60px_rgba(20,20,35,0.35)]">
+            <Image src="/moca-sentada.png" alt="Mulher relaxando em poltrona eletrica" className="h-full w-full object-cover" width={1920} height={1080} priority />
           </div>
         </div>
 

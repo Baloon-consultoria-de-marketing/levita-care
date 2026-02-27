@@ -16,7 +16,15 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative min-h-screen">
         <div className="absolute inset-0 rounded-[40px] md:rounded-[100px] overflow-hidden">
-          <Image src="/hero.jpg" alt="Mulher relaxando em poltrona elétrica" className="h-full w-full object-cover" width={1920} height={1080} />
+          <Image
+            src="/hero.png"
+            alt="Mulher relaxando em poltrona elétrica"
+            className="h-full w-full object-cover"
+            width={1920}
+            height={1080}
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 100vw"
+          />
         </div>
 
         {/* LOGO: Centralizada e Grande no Mobile -> Canto Superior no Desktop */}
