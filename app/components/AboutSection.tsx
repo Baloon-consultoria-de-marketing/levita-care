@@ -8,24 +8,20 @@ export function AboutSection() {
   return (
     <SectionWrapper id="about">
       <div className="w-full">
-        <h2 className="text-3xl font-normal leading-tight text-[var(--color-cta-hover)]/75 sm:text-4xl mb-6">
-          A poltrona é ideal para pós cirúrgico que exija repouso em uma posição específica, como, por exemplo:
-        </h2>
-
+        <h2 className="text-3xl font-normal leading-tight text-[var(--color-cta-hover)]/75 sm:text-4xl mb-6">Transforme o desafio da recuperação em um momento de descanso real.</h2>
         <p className="text-sm leading-relaxed text-[var(--color-hero-body)] sm:text-base mb-8">
-          Levantar e deitar serão um dos seus maiores desafios, sem contar que precisará de ajuda praticamente 24h para te auxiliar nessa mudança de posição. As dores nas costas e o incomodo de ficar
-          em uma posição sem poder se mexer tornarão seu pós operatório desgastante e mais lento.
+          No pós-operatório, movimentos simples como deitar ou levantar tornam-se grandes obstáculos, muitas vezes exigindo ajuda 24h e causando dores nas costas por imobilidade.
         </p>
       </div>
       <GridSection
         left={
           <>
             <div className="w-full">
-              <h2 className="text-3xl font-normal leading-tight text-[var(--color-cta-hover)]/75 sm:text-4xl mb-6">É por isso que a Poltroleve trouxe a solução ideal para sua recuperação!</h2>
+              <h2 className="text-3xl font-normal leading-tight text-[var(--color-cta-hover)]/75 sm:text-4xl mb-6">A Levitacare oferece a tecnologia que você precisa para recuperar sua autonomia.</h2>
 
               <p className="text-sm leading-relaxed text-[var(--color-hero-body)] sm:text-base mb-8">
-                O aluguel da nossa poltrona é perfeito para quem precisa de repouso em uma posição específica durante o pós-cirúrgico. Desenvolvidas para ajudar a manter a postura correta durante a
-                recuperação, nossas poltronas promovem o alívio da dor e ajudam na circulação sanguínea.
+                Nossas poltronas elétricas permitem ajustes milimétricos de posição, garantindo a postura correta, melhorando a circulação e eliminando a dor e o desgaste físico de quem opera e de
+                quem cuida.
               </p>
 
               <button className="mb-10 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">

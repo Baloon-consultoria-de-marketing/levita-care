@@ -4,20 +4,21 @@ import { SectionWrapper } from "./SectionWrapper";
 
 const features = [
   {
-    title: "Seguranca e autonomia",
-    description: "Voce se sentira mais seguro e com mais confianca para passar o pos operatorio pois tera a tecnologia da poltrona aliada ao seu conforto.",
+    title: "Seguranca e autonomia: Sua Confiança de volta.",
+    description:
+      "Recupere o controle da sua rotina com o apoio da tecnologia. As poltronas Levitacare oferecem a estabilidade necessária para que você enfrente o pós-operatório com muito mais confiança, sabendo que cada movimento é assistido por um equipamento seguro e robusto. ",
     icon: BsShieldCheck,
   },
   {
-    title: "Facilidade de Movimentacao",
+    title: "Tecnologia Lift: Movimentação Sem Esforço",
     description:
-      "Evite esforcos ao sentar e levantar. Nossa poltrona eletrica Lift possui o mecanismo que te deixa praticamente em pe sem fazer nenhum esforco ajudando a proteger os pontos cirurgicos, promovendo uma cicatrizacao mais segura e uma recuperacao com mais autonomia.",
+      "A poltrona possui um mecanismo de elevação suave que coloca você praticamente em pé, sem exigir força muscular que preserva seus pontos cirúrgicos evitando tensões abdominais ou articulares e evita esforços bruscos, garantindo que o processo de cura ocorra sem intercorrências. ",
     icon: BsArrowsMove,
   },
   {
-    title: "Conforto Personalizado",
+    title: "Conforto Personalizado e intuitivo",
     description:
-      "As poltronas possuem ajuste eletronico de posicao, permitindo que voce se acomode conforme suas necessidades, evitando desconfortos e facilitando o descanso. Nosso sistema de controle remoto e simples.",
+      "Cada corpo exige um ângulo diferente para o alívio da dor. Com nosso ajuste eletrônico milimétrico, você encontra a posição perfeita para descansar, ler ou dormir com apenas um toque. ",
     icon: BsSliders2,
   },
 ];

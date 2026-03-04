@@ -4,20 +4,21 @@ import { SectionWrapper } from "./SectionWrapper";
 
 const features = [
   {
-    title: "Seguranca e autonomia",
-    description: "Voce se sentira mais seguro e com mais confianca para passar o pos operatorio pois tera a tecnologia da poltrona aliada ao seu conforto.",
+    title: "Tecnologia que Protege sua Cirurgia ",
+    description:
+      "Diferente de uma poltrona comum, nosso sistema Lift de elevação motorizada coloca você em pé sem que você precise recrutar a musculatura abdominal ou articular. Isso é fundamental para proteger os pontos cirúrgicos, evitar o rompimento de suturas e garantir sua cicatrização. ",
     icon: BsShieldCheck,
   },
   {
-    title: "Facilidade de Movimentacao",
+    title: "Repouso correto",
     description:
-      "Evite esforcos ao sentar e levantar. Nossa poltrona eletrica Lift possui o mecanismo que te deixa praticamente em pe sem fazer nenhum esforco ajudando a proteger os pontos cirurgicos, promovendo uma cicatrizacao mais segura e uma recuperacao com mais autonomia.",
+      "Com o nosso controle remoto intuitivo, você recupera a liberdade de ajustar sua posição, sentar ou levantar sozinho e com segurança. É a tecnologia trabalhando para devolver sua autonomia e oferecer um descanso indicado durante todo o processo de cura. ",
     icon: BsArrowsMove,
   },
   {
-    title: "Conforto Personalizado",
+    title: "Especialistas em Recuperação Domiciliar (Home Care) ",
     description:
-      "As poltronas possuem ajuste eletronico de posicao, permitindo que voce se acomode conforme suas necessidades, evitando desconfortos e facilitando o descanso. Nosso sistema de controle remoto e simples.",
+      "Na Levitacare, entendemos que o pós-operatório não espera. Oferecemos um serviço de locação ágil, com equipamentos rigorosamente higienizados e revisados, garantindo um ambiente hospitalar com o conforto do seu lar.  ",
     icon: BsSliders2,
   },
 ];
