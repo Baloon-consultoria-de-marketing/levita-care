@@ -28,13 +28,13 @@ const HealthSection = () => {
     <section className="relative info-section-bg-health info-section-pin">
       <div className="info-section-sticky">
         <SectionWrapper className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-stretch lg:gap-10">
-          <div className="space-y-6 lg:order-first">
+          <div className="space-y-6 flex flex-col items-center lg:items-start lg:order-first">
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
                 <article
                   key={feature.title}
-                  className="rounded-3xl border border-[rgba(255,255,255,0.6)] bg-[var(--color-hero-bg)]/90 p-6 max-w-[370px] text-[var(--color-cta)] shadow-[0_18px_45px_rgba(12,12,24,0.25)]"
+                  className="rounded-3xl border border-[rgba(255,255,255,0.6)] bg-[var(--color-hero-bg)]/90 p-6 max-w-[370px] w-full text-[var(--color-cta)] shadow-[0_18px_45px_rgba(12,12,24,0.25)]"
                 >
                   <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-cta)] text-[var(--color-white)]">
                     <Icon size={20} />

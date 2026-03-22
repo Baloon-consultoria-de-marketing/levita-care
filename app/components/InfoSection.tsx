@@ -33,13 +33,13 @@ const InfoSection = () => {
           </div>
         </div>
 
-        <div className="space-y-6 items-end flex flex-col">
+        <div className="space-y-6 items-center lg:items-end flex flex-col">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
               <article
                 key={feature.title}
-                className="rounded-3xl border border-[rgba(255,255,255,0.6)] bg-[var(--color-hero-bg)]/90 p-6 max-w-[370px] text-[var(--color-cta)] shadow-[0_18px_45px_rgba(12,12,24,0.25)]"
+                className="rounded-3xl border border-[rgba(255,255,255,0.6)] bg-[var(--color-hero-bg)]/90 p-6 max-w-[370px] w-full text-[var(--color-cta)] shadow-[0_18px_45px_rgba(12,12,24,0.25)]"
               >
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-cta)] text-[var(--color-white)]">
                   <Icon size={20} />

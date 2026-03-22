@@ -11,21 +11,21 @@ const Footer = () => {
           <div className="relative w-48 h-16">
             <Image src="/logo_levitacare_transparente.png" alt="LevitaCare Logo" fill className="object-contain brightness-0 invert opacity-90" />
           </div>
-          <p className="text-sm leading-relaxed opacity-80 max-w-md">
+          <p className="text-sm leading-relaxed text-white max-w-md">
             Referência em aluguel de poltronas elétricas para recuperação pós-operatória e conforto de idosos. Tecnologia, segurança e bem-estar entregues na sua casa.
           </p>
           <div className="flex gap-4 mt-2">
-            <Link href="https://www.instagram.com/levitacare/" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300">
+            <Link href="https://www.instagram.com/levita.care/" target="_blank" className="text-white rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300">
               <BsInstagram size={20} />
             </Link>
             <Link
               href="https://api.whatsapp.com/send/?phone=5511945053590"
               target="_blank"
-              className="p-3 bg-white/5 rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300"
+              className="text-white rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300"
             >
               <BsWhatsapp size={20} />
             </Link>
-            <Link href="mailto:contato@levitacare.com.br" className="p-3 bg-white/5 rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300">
+            <Link href="mailto:contato@levitacare.com.br" className="text-white rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300">
               <BsEnvelope size={20} />
             </Link>
           </div>
@@ -36,24 +36,24 @@ const Footer = () => {
           <h3 className="text-white font-semibold text-lg relative w-fit after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-1/2 after:h-1 after:bg-[var(--color-cta)] after:rounded-full">
             Navegação
           </h3>
-          <ul className="flex flex-col gap-3 text-sm opacity-90">
+          <ul className="flex flex-col gap-3 text-sm text-white">
             <li>
-              <Link href="/" className="hover:text-[var(--color-cta)] transition-colors hover:translate-x-1 inline-block duration-200">
+              <Link href="/" className="hover:text-white/85 ease-in-out transition-colors hover:scale-105 inline-block duration-200">
                 Início
               </Link>
             </li>
             <li>
-              <Link href="#about" className="hover:text-[var(--color-cta)] transition-colors hover:translate-x-1 inline-block duration-200">
+              <Link href="#about" className="hover:text-white/85 ease-in-out transition-colors hover:scale-105 inline-block duration-200">
                 Sobre a Poltrona
               </Link>
             </li>
             <li>
-              <Link href="#how-it-works" className="hover:text-[var(--color-cta)] transition-colors hover:translate-x-1 inline-block duration-200">
+              <Link href="#how-it-works" className="hover:text-white/85 ease-in-out transition-colors hover:scale-105 inline-block duration-200">
                 Como Funciona
               </Link>
             </li>
             <li>
-              <Link href="#faq" className="hover:text-[var(--color-cta)] transition-colors hover:translate-x-1 inline-block duration-200">
+              <Link href="#faq" className="hover:text-white/85 ease-in-out transition-colors hover:scale-105 inline-block duration-200">
                 Dúvidas Frequentes
               </Link>
             </li>
@@ -69,8 +69,8 @@ const Footer = () => {
             <li className="flex items-start gap-3 group">
               <BsWhatsapp className="mt-1 text-[var(--color-cta)] group-hover:scale-110 transition-transform" size={18} />
               <div className="flex flex-col">
-                <span className="text-xs uppercase tracking-wide opacity-60">WhatsApp</span>
-                <Link href="https://api.whatsapp.com/send/?phone=5511945053590" target="_blank" className="font-medium text-white hover:text-[var(--color-cta)] transition-colors">
+                <span className=" text-white text-xs uppercase tracking-wide">WhatsApp</span>
+                <Link href="https://api.whatsapp.com/send/?phone=5511945053590" target="_blank" className="font-medium text-white ">
                   (11) 94505-3590
                 </Link>
               </div>
@@ -78,8 +78,8 @@ const Footer = () => {
             <li className="flex items-start gap-3 group">
               <BsEnvelope className="mt-1 text-[var(--color-cta)] group-hover:scale-110 transition-transform" size={18} />
               <div className="flex flex-col">
-                <span className="text-xs uppercase tracking-wide opacity-60">Email</span>
-                <Link href="mailto:contato@levitacare.com.br" className="font-medium text-white hover:text-[var(--color-cta)] transition-colors">
+                <span className=" text-white text-xs uppercase tracking-wide">Email</span>
+                <Link href="mailto:contato@levitacare.com.br" className="font-medium text-white ">
                   contato@levitacare.com.br
                 </Link>
               </div>
