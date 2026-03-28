@@ -145,7 +145,7 @@ const HowWorks = () => {
         <div className=" flex flex-col text-center gap-10 mt-32 sm:mt-96 px-4">
           <p className="text-center text-[var(--color-white)] text-4xl sm:text-6xl lg:text-8xl font-bold leading-tight">Recuperação sem complicação !</p>
           <p className="text-center text-[var(--color-white)] text-lg sm:text-xl ">
-            Investir no seu conforto durante a recuperação é essencial para garantir que seu corpo se recupere de forma mais eficiente. Com as poltronas elétricas da Poltroleve, você vai poder
+            Investir no seu conforto durante a recuperação é essencial para garantir que seu corpo se recupere de forma mais eficiente. Com as poltronas elétricas da Levitacare, você vai poder
             descansar e se recuperar da melhor forma possível
           </p>
           <p className="text-center text-[var(--color-white)] text-lg sm:text-xl w-full">Entre em contato conosco hoje mesmo e alugue a sua poltrona!</p>
