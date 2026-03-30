@@ -7,6 +7,21 @@ import { BsArrowUpRight } from "react-icons/bs";
 import { Questions } from "./Questions";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Script from "next/script";
+
+// Schema data para FAQ
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: Questions.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 
 const FaqItem = ({ question, answer, isOpen, toggleOpen }: { question: string; answer: string; isOpen: boolean; toggleOpen: () => void }) => {
   return (
@@ -37,6 +52,8 @@ const Faq = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto py-16 px-6">
+      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} strategy="afterInteractive" />
+
       <h2 className="text-4xl font-normal text-black sm:text-5xl text-center mb-12">Perguntas Frequentes</h2>
 
       <div className="grid gap-8 lg:grid-cols-2 lg:items-start">

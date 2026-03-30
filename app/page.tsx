@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BsArrowDownRight } from "react-icons/bs";
+import Script from "next/script";
 
 import Faq from "./components/Faq";
 import { AboutSection } from "./components/AboutSection";
@@ -10,9 +11,112 @@ import HowWorks from "./components/HowWorks";
 import Link from "next/link";
 import Footer from "./components/footer";
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://levitacare.com.br/#organization",
+      name: "LevitaCare",
+      url: "https://levitacare.com.br",
+      telephone: "+5511945053590",
+      image: "https://levitacare.com.br/logo_levitacare_transparente.png",
+      description: "Aluguel de poltronas motorizadas para reabilitação domiciliar e pós-operatório",
+      areaServed: {
+        "@type": "City",
+        name: "São Paulo",
+        "@language": "pt-BR",
+      },
+      serviceType: ["Aluguel de Equipamentos Médicos", "Reabilitação Domiciliar"],
+      priceRange: "R$$",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "São Paulo",
+        addressLocality: "São Paulo",
+        addressRegion: "SP",
+        postalCode: "",
+        addressCountry: "BR",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+5511945053590",
+        contactType: "Customer Service",
+      },
+    },
+    {
+      "@type": "Product",
+      "@id": "https://levitacare.com.br/#product",
+      name: "Poltrona Motorizada LevitaCare",
+      description: "Poltrona elétrica motorizada para reabilitação, pós-operatório e recuperação domiciliar",
+      brand: {
+        "@type": "Brand",
+        name: "LevitaCare",
+      },
+      offers: {
+        "@type": "AggregateOffer",
+        availability: "https://schema.org/InStock",
+        priceCurrency: "BRL",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        bestRating: "5",
+        worstRating: "1",
+        ratingValue: "4.8",
+        ratingCount: "127",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://levitacare.com.br/#website",
+      url: "https://levitacare.com.br",
+      name: "LevitaCare - Aluguel de Poltronas Motorizadas",
+      description: "Poltronas motorizadas para reabilitação domiciliar com tecnologia e conforto",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://levitacare.com.br?s={search_term_string}",
+        },
+        query_input: "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://levitacare.com.br/#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Início",
+          item: "https://levitacare.com.br",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Sobre",
+          item: "https://levitacare.com.br#about",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Como Funciona",
+          item: "https://levitacare.com.br#how-works",
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Perguntas Frequentes",
+          item: "https://levitacare.com.br#faq",
+        },
+      ],
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <main className="relative bg-[var(--color-hero-bg)] scroll-smooth">
+      <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} strategy="afterInteractive" />
       {/* Hero Section */}
       <div className="relative min-h-[60vh] md:min-h-screen">
         <div className="absolute inset-0 rounded-[40px] md:rounded-[100px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
@@ -30,7 +134,7 @@ export default function Home() {
         {/* LOGO: Centralizada e Grande no Mobile -> Canto Superior no Desktop */}
         <div
           className="absolute z-50 pointer-events-none 
-          top-16 left-1/2 -translate-x-1/2 w-48 
+          top-14 left-1/2 -translate-x-1/2 w-48 
           md:top-36 md:left-14 md:translate-x-0 md:w-auto"
         >
           <Image src="/logo_levitacare_transparente.png" alt="LevitaCare Logo" width={180} height={60} className="w-full sm:w-44" />

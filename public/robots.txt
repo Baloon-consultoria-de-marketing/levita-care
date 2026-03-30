@@ -1,0 +1,16 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /.next/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://levitacare.com.br/sitemap.xml
+
+# Crawl delay em ms
+Crawl-delay: 1
+
+# Regras específicas para Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
