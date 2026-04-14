@@ -79,8 +79,8 @@ const Footer = () => {
               <BsEnvelope className="mt-1 text-[var(--color-cta)] group-hover:scale-110 transition-transform" size={18} />
               <div className="flex flex-col">
                 <span className=" text-white text-xs uppercase tracking-wide">Email</span>
-                <Link href="mailto:contato@levitacare.com.br" className="font-medium text-white ">
-                  contato@levitacare.com.br
+                <Link href="mailto:carine@levitacare.com.br" className="font-medium text-white ">
+                  carine@levitacare.com.br
                 </Link>
               </div>
             </li>
