@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
+import { GA_TRACKING_ID } from "./lib/gtag";
 
 const mulish = Mulish({
   variable: "--font-mulish",
@@ -73,6 +75,18 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}');
+          `}
+        </Script>
       </head>
       <body className={`${mulish.variable} antialiased`}>{children}</body>
     </html>

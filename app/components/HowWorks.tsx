@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { SectionWrapper } from "./SectionWrapper";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Link from "next/link";
+import { WhatsAppLink } from "./WhatsAppLink";
 import { BsArrowUpRight } from "react-icons/bs";
 
 const steps = [
@@ -150,12 +150,14 @@ const HowWorks = () => {
           </p>
           <p className="text-center text-[var(--color-white)] text-lg sm:text-xl w-full">Entre em contato conosco hoje mesmo e alugue a sua poltrona!</p>
           <div className="flex justify-center">
-            <button className="mb-10 inline-flex items-center gap-2 rounded-full bg-[#ddd0c6] px-6 py-3 text-lg font-medium text-black cursor-pointer transition hover:-translate-y-2 ease-in-out duration-500 hover:shadow-[0px_0px_43px_0px_rgba(255,255,255,0.75)]">
-              <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas">
-                Alugar minha poltrona agora
-              </Link>
+            <WhatsAppLink
+              target="_blank"
+              href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas"
+              className="mb-10 inline-flex items-center gap-2 rounded-full bg-[#ddd0c6] px-6 py-3 text-lg font-medium text-black cursor-pointer transition hover:-translate-y-2 ease-in-out duration-500 hover:shadow-[0px_0px_43px_0px_rgba(255,255,255,0.75)]"
+            >
+              <span>Alugar minha poltrona agora</span>
               <BsArrowUpRight size={18} color="#000" />
-            </button>
+            </WhatsAppLink>
           </div>
         </div>
       </SectionWrapper>

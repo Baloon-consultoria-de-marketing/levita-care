@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import FinalImage from "../../public/footer-image.png";
-import Link from "next/link";
+import { WhatsAppLink } from "./WhatsAppLink";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Questions } from "./Questions";
 import { useState } from "react";
@@ -71,12 +71,14 @@ const Faq = () => {
       </div>
 
       <div className="mt-12 flex justify-center">
-        <button className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-8 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">
-          <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas">
-            Alugar minha poltrona agora
-          </Link>
+        <WhatsAppLink
+          target="_blank"
+          href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas"
+          className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-8 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"
+        >
+          <span>Alugar minha poltrona agora</span>
           <BsArrowUpRight size={16} />
-        </button>
+        </WhatsAppLink>
       </div>
     </div>
   );

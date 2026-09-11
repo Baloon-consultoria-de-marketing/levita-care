@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BsArrowUpRight } from "react-icons/bs";
 import { SectionWrapper } from "./SectionWrapper";
 import { GridSection } from "./GridSection";
-import Link from "next/link";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function AboutSection() {
   return (
@@ -24,12 +24,14 @@ export function AboutSection() {
                 quem cuida.
               </p>
 
-              <button className="mb-10 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]">
-                <Link target="_blank" href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas">
-                  Alugar minha poltrona agora
-                </Link>
+              <WhatsAppLink
+                target="_blank"
+                href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas"
+                className="mb-10 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"
+              >
+                <span>Alugar minha poltrona agora</span>
                 <BsArrowUpRight size={18} />
-              </button>
+              </WhatsAppLink>
 
               <h3 className="text-lg font-medium text-[var(--color-cta-hover)]/75 mb-6">Indicada para:</h3>
 

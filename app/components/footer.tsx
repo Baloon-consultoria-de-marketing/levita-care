@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { BsWhatsapp, BsInstagram, BsEnvelope } from "react-icons/bs";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const Footer = () => {
   return (
@@ -18,13 +19,13 @@ const Footer = () => {
             <Link href="https://www.instagram.com/levita.care/" target="_blank" className="text-white rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300">
               <BsInstagram size={20} />
             </Link>
-            <Link
+            <WhatsAppLink
               href="https://api.whatsapp.com/send/?phone=5511945053590"
               target="_blank"
               className="text-white rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300"
             >
               <BsWhatsapp size={20} />
-            </Link>
+            </WhatsAppLink>
             <Link href="mailto:contato@levitacare.com.br" className="text-white rounded-full hover:bg-[var(--color-cta)] hover:text-white transition-all duration-300">
               <BsEnvelope size={20} />
             </Link>
@@ -70,9 +71,9 @@ const Footer = () => {
               <BsWhatsapp className="mt-1 text-[var(--color-cta)] group-hover:scale-110 transition-transform" size={18} />
               <div className="flex flex-col">
                 <span className=" text-white text-xs uppercase tracking-wide">WhatsApp</span>
-                <Link href="https://api.whatsapp.com/send/?phone=5511945053590" target="_blank" className="font-medium text-white ">
+                <WhatsAppLink href="https://api.whatsapp.com/send/?phone=5511945053590" target="_blank" className="font-medium text-white ">
                   (11) 94505-3590
-                </Link>
+                </WhatsAppLink>
               </div>
             </li>
             <li className="flex items-start gap-3 group">
