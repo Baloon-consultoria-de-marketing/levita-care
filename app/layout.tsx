@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { GA_TRACKING_ID } from "./lib/gtag";
+import { GA_TRACKING_ID, CONVERSION_ID } from "./lib/gtag";
 
 const mulish = Mulish({
   variable: "--font-mulish",
@@ -83,8 +83,25 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', '${GA_TRACKING_ID}');
+
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined' && url) {
+                  window.location = url;
+                }
+              };
+              if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                  'send_to': '${CONVERSION_ID}',
+                  'event_callback': callback
+                });
+              }
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
           `}
         </Script>
       </head>
