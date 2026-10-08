@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: 🚀 Publicar via FTP na Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER || '147.93.64.36' }}
           username: ${{ secrets.FTP_USERNAME || 'u754864411.levitacare.com.br' }}
@@ -37,4 +37,5 @@ jobs:
           protocol: ftp
           local-dir: ./out/
           server-dir: ${{ secrets.FTP_SERVER_DIR || './' }}
+          state-name: .deploy-sync-state.json
           dangerous-clean-slate: false
