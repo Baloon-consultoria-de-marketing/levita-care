@@ -1,0 +1,40 @@
+name: Deploy Automático para Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Clonar repositório
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🏗️ Compilar projeto (Next.js Static Export)
+        run: npm run build
+
+      - name: 🚀 Publicar via FTP na Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER || '147.93.64.36' }}
+          username: ${{ secrets.FTP_USERNAME || 'u754864411.levitacare.com.br' }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          protocol: ftp
+          local-dir: ./out/
+          server-dir: ${{ secrets.FTP_SERVER_DIR || 'public_html/' }}
+          dangerous-clean-slate: false
