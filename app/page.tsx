@@ -132,16 +132,25 @@ export default function Home() {
           />
         </div>
 
-        {/* LOGO: Centralizada e Grande no Mobile -> Canto Superior no Desktop */}
+        {/* LOGO: Centralizada no Mobile -> Canto Superior no Desktop */}
         <div
-          className="absolute z-50 pointer-events-none 
-          top-14 left-1/2 -translate-x-1/2 w-48 
-          md:top-36 md:left-14 md:translate-x-0 md:w-auto"
+          className="absolute z-50 
+          top-6 left-1/2 -translate-x-1/2 
+          md:top-6 lg:top-7 md:left-12 lg:left-16 md:translate-x-0"
         >
-          <Image src="/logo_levitacare_transparente.png" alt="LevitaCare Logo" width={180} height={60} className="w-full sm:w-44" />
+          <Link href="/" className="inline-block transition hover:opacity-90">
+            <Image
+              src="/logo_levitacare_transparente.png"
+              alt="LevitaCare Logo"
+              width={160}
+              height={86}
+              className="w-32 sm:w-36 md:w-38 lg:w-40 h-auto"
+              priority
+            />
+          </Link>
         </div>
 
-        <div className="relative z-10 max-w-350 mx-auto flex min-h-[70vh] md:min-h-screen items-center px-4 pt-48 pb-12 sm:px-6 sm:py-16">
+        <div className="relative z-10 max-w-350 mx-auto flex min-h-[70vh] md:min-h-screen items-center px-4 pt-36 pb-12 sm:px-6 sm:py-16 md:pt-32 md:pb-12">
           <section className="w-full max-w-xl rounded-3xl border border-[color:var(--color-white)]/[0.6] bg-[color:var(--color-white)]/[0.65] p-6 shadow-[0_20px_60px_var(--color-hero-shadow)]/[0.25] backdrop-blur-md sm:p-10">
             <h1 className="text-3xl sm:text-4xl max-w-120 font-normal leading-tight text-[var(--color-hero-heading)]">A tecnologia aliada à sua reabilitação: Aluguel de Poltronas Motorizadas.</h1>
 
