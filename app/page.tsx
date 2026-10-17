@@ -158,6 +158,7 @@ export default function Home() {
               Evite esforços desnecessários e riscos de queda. Oferecemos a solução ideal para uma recuperação hospitalar no aconchego do seu lar.
             </p>
             <WhatsAppLink
+              id="btn-whatsapp-hero"
               target="_blank"
               href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas"
               className="mt-6 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-5 py-2.5 sm:px-6 sm:py-3 text-base sm:text-[17px] font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[var(--color-cta)]/[0.3] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"

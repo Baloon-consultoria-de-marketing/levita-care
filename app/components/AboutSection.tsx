@@ -25,6 +25,7 @@ export function AboutSection() {
               </p>
 
               <WhatsAppLink
+                id="btn-whatsapp-about"
                 target="_blank"
                 href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas"
                 className="mb-10 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-6 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"

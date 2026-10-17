@@ -1,5 +1,6 @@
 export const GA_TRACKING_ID = "AW-18039450310";
 export const CONVERSION_ID = "AW-18039450310/qpKrCJu4v_McEMbv8JID";
+export const GTM_ID = "GTM-NB9FTSP6";
 
 declare global {
   interface Window {
@@ -9,8 +10,16 @@ declare global {
   }
 }
 
-export const trackWhatsAppConversion = (url?: string) => {
+export const trackWhatsAppConversion = (url?: string, buttonId?: string) => {
   if (typeof window === "undefined") return;
+
+  // Dispara evento para o Google Tag Manager (GTM)
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "whatsapp_click",
+    button_id: buttonId || "whatsapp_link",
+    destination_url: url || "",
+  });
 
   if (typeof window.gtag_report_conversion === "function") {
     window.gtag_report_conversion(url);
@@ -31,3 +40,4 @@ export const trackWhatsAppConversion = (url?: string) => {
     ]);
   }
 };
+
