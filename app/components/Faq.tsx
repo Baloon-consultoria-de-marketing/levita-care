@@ -73,8 +73,6 @@ const Faq = () => {
       <div className="mt-12 flex justify-center">
         <WhatsAppLink
           id="btn-whatsapp-faq"
-          target="_blank"
-          href="https://api.whatsapp.com/send/?phone=5511945053590&text=Quero+saber+mais+sobre+o+aluguel+de+poltronas"
           className="inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-8 py-3 text-sm font-medium text-[var(--color-white)] shadow-lg shadow-[rgba(47,50,70,0.3)] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"
         >
           <span>Alugar minha poltrona agora</span>
