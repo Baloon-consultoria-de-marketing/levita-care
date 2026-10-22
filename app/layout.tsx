@@ -97,15 +97,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             gtag('config', '${GA_TRACKING_ID}');
 
             function gtag_report_conversion(url) {
-              var callback = function () {
-                if (typeof(url) != 'undefined' && url) {
-                  window.location = url;
-                }
-              };
               if (typeof gtag === 'function') {
                 gtag('event', 'conversion', {
-                  'send_to': '${CONVERSION_ID}',
-                  'event_callback': callback
+                  'send_to': '${CONVERSION_ID}'
                 });
               }
               return false;

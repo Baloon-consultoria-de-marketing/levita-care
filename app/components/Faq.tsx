@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import FinalImage from "../../public/footer-image.png";
+import FinalImage from "../../public/footer-desktop.png";
 import { WhatsAppLink } from "./WhatsAppLink";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Questions } from "./Questions";

@@ -9,7 +9,14 @@ type WhatsAppLinkProps = LinkProps &
     children: ReactNode;
   };
 
-export function WhatsAppLink({ children, onClick, id, ...props }: WhatsAppLinkProps) {
+export function WhatsAppLink({
+  children,
+  onClick,
+  id,
+  target = "_blank",
+  rel = "noopener noreferrer",
+  ...props
+}: WhatsAppLinkProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     trackWhatsAppConversion(props.href?.toString(), id);
     if (onClick) {
@@ -18,7 +25,7 @@ export function WhatsAppLink({ children, onClick, id, ...props }: WhatsAppLinkPr
   };
 
   return (
-    <Link id={id} {...props} onClick={handleClick}>
+    <Link id={id} target={target} rel={rel} {...props} onClick={handleClick}>
       {children}
     </Link>
   );

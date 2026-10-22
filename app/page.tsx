@@ -120,15 +120,26 @@ export default function Home() {
       <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} strategy="afterInteractive" />
       {/* Hero Section */}
       <div className="relative min-h-[60vh] md:min-h-screen">
-        <div className="absolute inset-0 rounded-[40px] md:rounded-[100px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
+        <div className="absolute inset-0 rounded-b-[60px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
+          {/* Banner Mobile */}
           <Image
-            src="/hero.png"
+            src="/banner-mobile.png"
+            alt="Mulher relaxando em poltrona elétrica"
+            className="block md:hidden h-full w-full object-cover"
+            width={1080}
+            height={1920}
+            priority
+            sizes="100vw"
+          />
+          {/* Banner Desktop */}
+          <Image
+            src="/banner.png"
             alt="Mulher relaxando em poltrona elétrica"
             className="hidden md:block h-full w-full object-cover"
             width={1920}
             height={1080}
             priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 100vw"
+            sizes="100vw"
           />
         </div>
 
