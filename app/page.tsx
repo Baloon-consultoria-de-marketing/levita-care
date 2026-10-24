@@ -119,8 +119,8 @@ export default function Home() {
     <main className="relative bg-[var(--color-hero-bg)] scroll-smooth">
       <Script id="schema-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} strategy="afterInteractive" />
       {/* Hero Section */}
-      <div className="relative min-h-[60vh] md:min-h-screen">
-        <div className="absolute inset-0 rounded-b-[60px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
+      <div className="relative min-h-[82vh] md:min-h-screen">
+        <div className="absolute inset-0 rounded-b-[40px] sm:rounded-b-[60px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
           {/* Banner Mobile */}
           <div className="block md:hidden h-full w-full relative">
             <Image
@@ -156,7 +156,7 @@ export default function Home() {
         {/* LOGO: Alinhada à esquerda no Mobile e Desktop */}
         <div
           className="absolute z-50 
-          top-6 left-4 sm:left-6 
+          top-5 left-4 sm:left-6 
           md:top-6 lg:top-7 md:left-12 lg:left-16"
         >
           <Link href="/" className="inline-block transition hover:opacity-90">
@@ -165,25 +165,25 @@ export default function Home() {
               alt="LevitaCare Logo"
               width={160}
               height={86}
-              className="w-32 sm:w-36 md:w-38 lg:w-40 h-auto"
+              className="w-28 sm:w-36 md:w-38 lg:w-40 h-auto"
               priority
             />
           </Link>
         </div>
 
-        <div className="relative z-10 max-w-350 mx-auto flex min-h-[70vh] md:min-h-screen items-center px-4 pt-36 pb-12 sm:px-6 sm:py-16 md:pt-32 md:pb-12">
-          <section className="w-full max-w-xl rounded-3xl border border-[color:var(--color-white)]/[0.6] bg-[color:var(--color-white)]/[0.65] p-6 shadow-[0_20px_60px_var(--color-hero-shadow)]/[0.25] backdrop-blur-md sm:p-10">
-            <h1 className="text-3xl sm:text-4xl max-w-120 font-normal leading-tight text-[var(--color-hero-heading)]">A tecnologia aliada à sua reabilitação: Aluguel de Poltronas Motorizadas.</h1>
+        <div className="relative z-10 max-w-350 mx-auto flex min-h-[82vh] md:min-h-screen items-end sm:items-center px-4 pt-24 pb-6 sm:px-6 sm:py-16 md:pt-32 md:pb-12">
+          <section className="w-full max-w-md sm:max-w-xl rounded-2xl sm:rounded-3xl border border-[color:var(--color-white)]/[0.7] bg-[color:var(--color-white)]/[0.72] p-5 sm:p-10 shadow-[0_12px_40px_var(--color-hero-shadow)]/[0.2] sm:shadow-[0_20px_60px_var(--color-hero-shadow)]/[0.25] backdrop-blur-md">
+            <h1 className="text-[22px] sm:text-4xl max-w-120 font-semibold sm:font-normal leading-tight text-[var(--color-hero-heading)]">A tecnologia aliada à sua reabilitação: Aluguel de Poltronas Motorizadas.</h1>
 
-            <p className="mt-4 sm:mt-5 leading-relaxed text-[var(--color-hero-body)] max-w-96 text-base sm:text-[17px] font-extralight">
+            <p className="mt-3 sm:mt-5 leading-relaxed text-[var(--color-hero-body)] max-w-96 text-sm sm:text-[17px] font-normal sm:font-extralight">
               Evite esforços desnecessários e riscos de queda. Oferecemos a solução ideal para uma recuperação hospitalar no aconchego do seu lar.
             </p>
             <WhatsAppLink
               id="btn-whatsapp-hero"
-              className="mt-6 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-5 py-2.5 sm:px-6 sm:py-3 text-base sm:text-[17px] font-medium text-[var(--color-white)] shadow-lg cursor-pointer shadow-[var(--color-cta)]/[0.3] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"
+              className="mt-4 sm:mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-cta)] px-5 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-[17px] font-medium text-[var(--color-white)] shadow-md sm:shadow-lg cursor-pointer shadow-[var(--color-cta)]/[0.3] transition hover:-translate-y-0.5 hover:bg-[var(--color-cta-hover)]"
             >
               <span>Conhecer</span>
-              <BsArrowDownRight size={18} />
+              <BsArrowDownRight size={16} className="sm:w-[18px] sm:h-[18px]" />
             </WhatsAppLink>
           </section>
         </div>
