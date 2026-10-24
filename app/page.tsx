@@ -123,7 +123,7 @@ export default function Home() {
         <div className="absolute inset-0 rounded-b-[60px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
           {/* Banner Mobile */}
           <Image
-            src="/banner-mobile.png"
+            src="/site_levita-mobile_blur_fix.png"
             alt="Mulher relaxando em poltrona elétrica"
             className="block md:hidden h-full w-full object-cover"
             width={1080}
@@ -133,7 +133,7 @@ export default function Home() {
           />
           {/* Banner Desktop */}
           <Image
-            src="/banner.png"
+            src="/site levita_desk_blur_fix.png"
             alt="Mulher relaxando em poltrona elétrica"
             className="hidden md:block h-full w-full object-cover"
             width={1920}
