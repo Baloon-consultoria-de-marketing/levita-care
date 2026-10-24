@@ -122,15 +122,25 @@ export default function Home() {
       <div className="relative min-h-[60vh] md:min-h-screen">
         <div className="absolute inset-0 rounded-b-[60px] overflow-hidden bg-[#f9f4f3] md:bg-transparent">
           {/* Banner Mobile */}
-          <Image
-            src="/site_levita-mobile_blur_fix.png"
-            alt="Mulher relaxando em poltrona elétrica"
-            className="block md:hidden h-full w-full object-cover"
-            width={1080}
-            height={1920}
-            priority
-            sizes="100vw"
-          />
+          <div className="block md:hidden h-full w-full relative">
+            <Image
+              src="/site_levita-mobile_blur_fix.png"
+              alt="Mulher relaxando em poltrona elétrica"
+              className="h-full w-full object-cover object-top"
+              width={1080}
+              height={1920}
+              priority
+              sizes="100vw"
+            />
+            {/* Efeito suave de iluminação/blur branco apenas no canto superior esquerdo (atrás da logo) */}
+            <div 
+              className="absolute top-0 left-0 w-4/5 max-w-xs h-36 pointer-events-none 
+              bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.85)_0%,rgba(249,244,243,0.5)_40%,transparent_75%)] 
+              backdrop-blur-[2px] 
+              [mask-image:radial-gradient(ellipse_at_top_left,black_35%,transparent_75%)] 
+              [-webkit-mask-image:radial-gradient(ellipse_at_top_left,black_35%,transparent_75%)]" 
+            />
+          </div>
           {/* Banner Desktop */}
           <Image
             src="/site levita_desk_blur_fix.png"
@@ -143,11 +153,11 @@ export default function Home() {
           />
         </div>
 
-        {/* LOGO: Centralizada no Mobile -> Canto Superior no Desktop */}
+        {/* LOGO: Alinhada à esquerda no Mobile e Desktop */}
         <div
           className="absolute z-50 
-          top-6 left-1/2 -translate-x-1/2 
-          md:top-6 lg:top-7 md:left-12 lg:left-16 md:translate-x-0"
+          top-6 left-4 sm:left-6 
+          md:top-6 lg:top-7 md:left-12 lg:left-16"
         >
           <Link href="/" className="inline-block transition hover:opacity-90">
             <Image
