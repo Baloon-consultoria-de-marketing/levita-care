@@ -41,3 +41,33 @@ export const trackWhatsAppConversion = (url?: string, buttonId?: string) => {
   }
 };
 
+export const trackThankYouConversion = () => {
+  if (typeof window === "undefined") return;
+
+  // Dispara evento específico para o Google Tag Manager (GTM)
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "conversion_obrigado",
+    page_path: "/obrigado/",
+  });
+
+  if (typeof window.gtag_report_conversion === "function") {
+    window.gtag_report_conversion("/obrigado/");
+    return;
+  }
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "conversion", {
+      send_to: CONVERSION_ID,
+    });
+  } else if (Array.isArray(window.dataLayer)) {
+    window.dataLayer.push([
+      "event",
+      "conversion",
+      {
+        send_to: CONVERSION_ID,
+      },
+    ]);
+  }
+};
+

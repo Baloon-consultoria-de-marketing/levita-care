@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/.next/", "/private/"],
+      disallow: ["/.next/", "/private/", "/obrigado/"],
       crawlDelay: 1,
     },
     sitemap: "https://levitacare.com.br/sitemap.xml",
